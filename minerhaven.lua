@@ -129,3 +129,4 @@ toBase = function()
         end
     end
 end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/darzex/script/main/anti-fling.lua"))()
