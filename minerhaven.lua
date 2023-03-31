@@ -111,17 +111,6 @@ Section:NewToggle("autoopen crate 2", "ToggleInfo", function(state)
     end
 end)
 
-local Tab = Window:NewTab("open gui")image.png
-local Section = Tab:NewSection("misc")
-Section:NewButton("st Patrick event", "ButtonInfo", function()
-    game.Players.LocalPlayer.PlayerGui.GUI.Patrick.Visible = true
-end)
-
-Section:NewButton("crate shop", "ButtonInfo", function()
-game.Players.LocalPlayer.PlayerGui.GUI.SpookMcDookShop.Visible = true
-end)
-
-
 toBase = function()
     for i,v in pairs(workspace.Tycoons:GetDescendants()) do 
         if string.find(v.Name, 'Factory') and v.Owner.Value == game.Players.LocalPlayer.Name then 
@@ -129,4 +118,3 @@ toBase = function()
         end
     end
 end
-
