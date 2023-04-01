@@ -11,7 +11,7 @@ Tab = Window:NewTab("auto buy")
 local Section = Tab:NewSection("auto buy")
 
 
-Section:NewDropdown("choose egg", "DropdownInf", {"mythic_egg", "cracked_egg", "regular_pet_egg", "royal_egg", "retired_egg", "seasia_2023_egg"}, function(buyegg)
+Section:NewDropdown("choose egg", "DropdownInf", {"mythic_egg", "woodland_egg", "cracked_egg", "regular_pet_egg", "royal_egg", "retired_egg", "seasia_2023_egg"}, function(buyegg)
     print(buyegg)
     buyegg1 = buyegg
 end)
