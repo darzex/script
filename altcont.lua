@@ -1,4 +1,4 @@
-repeat until game:Loaded()
+
 loadstring(game:HttpGet(('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'),true))()
 
 game.StarterGui:SetCore("SendNotification", {
