@@ -83,7 +83,7 @@ function output(plr, msg)
         end
         end
         if msg == "cash" then
-                local rawAmount = player.PlayerGui.BucksIndicatorApp.CurrencyIndicator.Container.Amount.Text
+                local rawAmount = game:GetService("Players").LocalPlayer.PlayerGui.BucksIndicatorApp.CurrencyIndicator.Container.Amount.Text
                 local amount = rawAmount:gsub(",", "")  -- Remove commas from the raw amount
                 local message = "i have " .. amount .. " buck"
                 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(message)
@@ -122,4 +122,3 @@ game.Players.ChildAdded:Connect(function(plr)
 		end)
 	end
 end)
-
