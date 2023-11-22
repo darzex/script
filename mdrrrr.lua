@@ -21,12 +21,6 @@ local button = game:GetService("Players").LocalPlayer.PlayerGui.Match.TopFrame.A
 repeat
     wait(1) -- Attente d'une seconde avant de vérifier à nouveau la condition
 until game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchFinish.Visible == true
-local function click(a)
-    game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+50,0,true,a,1)
-    game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+50,0,false,a,1)
-
-click(game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchFinish.MatchFinishFrame.EndOptions.PlayAgain.ButtonFrame.PlayAgainButton)
-end
 
 local function SendMessageToWebhook(message, userId)
     local embed = {
@@ -65,3 +59,13 @@ SendMessageToWebhook(
     "⌛ Time duration: " .. timerValue .. "\n\n🪙 Coins earned: " .. coinsAmount .. "\n\n🌊 Waves survived: " .. wavesSurvived,
     userId
 )
+
+while true do 
+wait(8)
+local function click(a)
+    game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+50,0,true,a,1)
+    game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+50,0,false,a,1)
+end
+
+click(game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchFinish.MatchFinishFrame.EndOptions.PlayAgain.ButtonFrame.PlayAgainButton)
+end
