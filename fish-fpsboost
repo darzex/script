@@ -1,3 +1,8 @@
+if DIW then
+	return
+end
+
+pcall(function() getgenv().DIW = true end)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lenutjr/lenut/main/scripts"))()
 task.wait(5)
 _G.Settings = {
