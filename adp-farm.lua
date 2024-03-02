@@ -1,7 +1,7 @@
 repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/ReQiuYTPL/hub/main/ReQiuYTPLHub.lua'),true))()
 task.wait(20)
---loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 task.wait(15)
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 task.wait(3)
